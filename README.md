@@ -1,9 +1,9 @@
 # Arambot
 Discord bot for league of legends
 
-Functions as of today:
+## Functions as of today:
 1. Can webscrape lolalytics.com for champion statistics for newest patch.
 
-Commands:
+## Commands:
 
-!champ - Gets stats for 
+!champ [champname] - Gets stats for champion
