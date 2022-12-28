@@ -2,16 +2,18 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.firefox.options import Options
 from bs4 import BeautifulSoup
 import re
 
 def get_champion_data(champion_name):
-    op = webdriver.ChromeOptions()
-    op.add_argument('headless')
-    driver = webdriver.Chrome(options=op)
-    
+    ## TODO HEADLESS MODE
+    #fireFoxOptions = Options()
+    #fireFoxOptions.headless = True
+    driver = webdriver.Firefox()
+
     driver.get(f'https://lolalytics.com/lol/{champion_name}/build')
-    cls = re.compile('ChampionStats_stats.+')
+    cls = re.compile('ChampionStats.+')
 
     try:
         # champion stats div
