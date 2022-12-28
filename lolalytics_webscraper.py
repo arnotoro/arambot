@@ -44,4 +44,4 @@ def get_champion_data(champion_name):
 
         #res = f'Patch: {patch.text} \\ Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
         print(winrate, pickrate, banrate)
-        return f'Patch: {patch} \\ Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
+        return f'Patch: {patch} \\ Champion: {champion_name.capitalize()}, Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
