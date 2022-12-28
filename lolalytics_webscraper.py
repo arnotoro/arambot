@@ -2,14 +2,15 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from bs4 import BeautifulSoup
 import re
 
 def get_champion_data(champion_name):
-    ## TODO HEADLESS MODE
-    #fireFoxOptions = Options()
-    #fireFoxOptions.headless = True
+    # TODO HEADLESS MODE
+    #firefox_options = Options()
+    #firefox_options.add_argument("--headless")
     driver = webdriver.Firefox()
 
     driver.get(f'https://lolalytics.com/lol/{champion_name}/build')
@@ -41,5 +42,6 @@ def get_champion_data(champion_name):
     finally:
         driver.quit()
 
-        #res = f'Patch: {patch.text} \n Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
+        #res = f'Patch: {patch.text} \\ Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
+        print(winrate, pickrate, banrate)
         return f'Patch: {patch} \\ Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
