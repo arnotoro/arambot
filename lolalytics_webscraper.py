@@ -6,7 +6,10 @@ from bs4 import BeautifulSoup
 import re
 
 def get_champion_data(champion_name):
-    driver = webdriver.Firefox()
+    op = webdriver.ChromeOptions()
+    op.add_argument('headless')
+    driver = webdriver.Chrome(options=op)
+    
     driver.get(f'https://lolalytics.com/lol/{champion_name}/build')
     cls = re.compile('ChampionStats_stats.+')
 
