@@ -36,16 +36,9 @@ def getChampionName(championID):
         if json.loads(res.text)["data"][champion]["key"] == championID:
             return json.loads(res.text)["data"][champion]["id"]
 
-def main():
+if __name__ == '__main__':
     sumID = getSummonerID('LanD CrusHer')
     champIDs = getMatch(sumID)
     #iterate through the array of champion ids and print the champion name
     for championID in getMatch(sumID):
         print(getChampionName(str(championID)))
-
-
-
-main()
-
-
-
