@@ -7,3 +7,13 @@ Discord bot for league of legends
 ## Commands:
 
 !champ [champname] - Gets stats for champion
+
+
+## Dependencies
+
+pip install
+
+- discord.py
+- python-dotenv
+- selenium
+- bs4
