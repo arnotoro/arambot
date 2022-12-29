@@ -11,7 +11,7 @@ Discord bot for league of legends
 !game [summoner name] - Gets champions from active game
 
 
-## Dependencies
+### Dependencies
 
 pip install
 
