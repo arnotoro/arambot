@@ -7,7 +7,7 @@ Discord bot for league of legends
 
 ## Commands:
 
-!champ [champname] - Gets stats for champion
+!champ [champname] - Gets stats for champion \\
 !game [summoner name] - Gets champions from active game
 
 
