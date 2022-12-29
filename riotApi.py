@@ -32,13 +32,15 @@ def getMatch(summonerID):
 def getChampionName(championID):
     api = f'http://ddragon.leagueoflegends.com/cdn/10.16.1/data/en_US/champion.json'
     res = requests.get(api)
-    for champion in json.loads(res.text)["data"]:
-        if json.loads(res.text)["data"][champion]["key"] == championID:
-            return json.loads(res.text)["data"][champion]["id"]
+    data = json.loads(res.text)["data"]
+    for champion in data:
+        if data[champion]["key"] == championID:
+            return data[champion]["id"]
 
 if __name__ == '__main__':
-    sumID = getSummonerID('LanD CrusHer')
+    sumID = getSummonerID('LateNightSoloQEZ')
     champIDs = getMatch(sumID)
+
     #iterate through the array of champion ids and print the champion name
     for championID in getMatch(sumID):
         print(getChampionName(str(championID)))
