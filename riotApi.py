@@ -27,13 +27,9 @@ def getMatch(summonerID):
                 print(player[value])
 
 
-def main():
-    sumID = getSummonerID('tpupper')
+if __name__ == '__main__':
+    sumID = getSummonerID('Land Crusher')
     getMatch(sumID)
-
-
-
-main()
 
 
 
