@@ -2,11 +2,13 @@
 Discord bot for league of legends
 
 ## Functions as of today:
-1. Can webscrape lolalytics.com for champion statistics for newest patch.
+- Can webscrape lolalytics.com for champion statistics for newest patch.
+- Can get champions from players current game
 
 ## Commands:
 
 !champ [champname] - Gets stats for champion
+!game [summoner name] - Gets champions from active game
 
 
 ## Dependencies
@@ -17,3 +19,4 @@ pip install
 - python-dotenv
 - selenium
 - bs4
+- requests
