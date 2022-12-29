@@ -18,18 +18,30 @@ def getSummonerID(summonerName):
 
 def getMatch(summonerID):
     api = f'https://euw1.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/{summonerID}?api_key={RIOT_API}'    
-    
+    # array to store champion ids
+    championIDs = []
 
     res2 = requests.get(api)
     for player in json.loads(res2.text)["participants"]:
         for value in player:
             if value == 'championId':
-                print(player[value])
+                championIDs.append(player[value])
+    # return championIDs
+    return championIDs
 
+def getChampionName(championID):
+    api = f'http://ddragon.leagueoflegends.com/cdn/10.16.1/data/en_US/champion.json'
+    res = requests.get(api)
+    for champion in json.loads(res.text)["data"]:
+        if json.loads(res.text)["data"][champion]["key"] == championID:
+            return json.loads(res.text)["data"][champion]["id"]
 
 def main():
-    sumID = getSummonerID('tpupper')
-    getMatch(sumID)
+    sumID = getSummonerID('LanD CrusHer')
+    champIDs = getMatch(sumID)
+    #iterate through the array of champion ids and print the champion name
+    for championID in getMatch(sumID):
+        print(getChampionName(str(championID)))
 
 
 
