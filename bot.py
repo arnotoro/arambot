@@ -3,6 +3,8 @@ import discord
 from dotenv import load_dotenv
 from discord.ext import commands
 from lolalytics_webscraper import *
+from riotApi import *
+
 
 load_dotenv()
 
@@ -30,5 +32,16 @@ async def ping(ctx, help="Ping the bot"):
 @bot.command()
 async def champ(ctx, champion_name, help="Get the champion stats from recent patch"):
     await ctx.send(get_champion_data(champion_name))
+
+@bot.command()
+async def game(ctx, summoner_name, help=""):
+    summonerID = getSummonerID(summoner_name)
+    championIDs = getMatch(summonerID)
+    championNames = []
+    for champion in championIDs:
+        championNames.append(getChampionName(str(champion)))
+
+    await ctx.send(' '.join(championNames))
+
 
 bot.run(TOKEN)
