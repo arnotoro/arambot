@@ -2,7 +2,7 @@ import os
 import discord
 from dotenv import load_dotenv
 from discord.ext import commands
-from data_fetcher import returnChampionData
+from jsonParse import returnChampionData
 from lolalytics_webscraper import *
 from riotApi import *
 
@@ -35,7 +35,7 @@ async def champ(ctx, champion_name, help="Get the champion stats from recent pat
     # create an object to store the champion data
     championData = []
     championData = returnChampionData(champion_name)
-    await ctx.send(f'Champion: {championData["name"]}\nWinrate: {championData["winrate"]}\nPickrate: {championData["pickrate"]}\nBanrate: {championData["banrate"]}')
+    await ctx.send(f'Champion: {championData["name"].capitalize()}\nWinrate: {championData["winrate"]}\nPickrate: {championData["pickrate"]}\nBanrate: {championData["banrate"]}')
 
 @bot.command()
 async def game(ctx, summoner_name, help=""):

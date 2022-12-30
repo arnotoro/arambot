@@ -2,7 +2,7 @@ import requests
 import json
 from dotenv import load_dotenv
 import os
-from data_fetcher import returnChampionData
+from jsonParse import returnChampionData
 
 from lolalytics_webscraper import get_champion_data 
 
