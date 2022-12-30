@@ -2,15 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.firefox.service import Service
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import re
 
 def get_champion_data(champion_name):
     # TODO HEADLESS MODE
-    #firefox_options = Options()
-    #firefox_options.add_argument("--headless")
+    #options = Options()
+    #options.headless = True
+    #options.javascript_enabled = True
+    #options.no_sandbox = False
     driver = webdriver.Firefox()
 
     driver.get(f'https://lolalytics.com/lol/{champion_name}/build')
@@ -32,7 +33,6 @@ def get_champion_data(champion_name):
         soup = BeautifulSoup(driver.page_source, 'html.parser')
 
         results = soup.find_all('div', class_=cls)
-
         for result in results:
             stats = result.find_all('div')
             winrate = stats[1].text
@@ -45,3 +45,7 @@ def get_champion_data(champion_name):
         #res = f'Patch: {patch.text} \\ Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
         print(winrate, pickrate, banrate)
         return f'Patch: {patch} \\ Champion: {champion_name.capitalize()}, Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
+
+
+if __name__ == '__main__':
+    get_champion_data('kayn')
