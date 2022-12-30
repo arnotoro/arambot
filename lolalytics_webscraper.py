@@ -16,6 +16,8 @@ def get_champion_data(champion_name):
 
     driver.get(f'https://lolalytics.com/lol/{champion_name}/build')
     cls = re.compile('ChampionStats.+')
+    # create an object to store champion stats
+    champion_stats = {}
 
     try:
         # champion stats div
@@ -35,16 +37,18 @@ def get_champion_data(champion_name):
         results = soup.find_all('div', class_=cls)
         for result in results:
             stats = result.find_all('div')
-            winrate = stats[1].text
-            pickrate = stats[8].text
-            banrate = stats[10].text
+            #store champion stats in object
+            champion_stats['name'] = champion_name
+            champion_stats['winrate'] = stats[1].text
+            champion_stats['pickrate'] = stats[8].text
+            champion_stats['banrate'] = stats[10].text
 
     finally:
         driver.quit()
 
         #res = f'Patch: {patch.text} \\ Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
-        print(winrate, pickrate, banrate)
-        return f'Patch: {patch} \\ Champion: {champion_name.capitalize()}, Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
+        return champion_stats
+        #return f'Patch: {patch} \\ Champion: {champion_name.capitalize()}, Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
 
 
 if __name__ == '__main__':

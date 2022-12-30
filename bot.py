@@ -2,6 +2,7 @@ import os
 import discord
 from dotenv import load_dotenv
 from discord.ext import commands
+from data_fetcher import returnChampionData
 from lolalytics_webscraper import *
 from riotApi import *
 
@@ -31,7 +32,10 @@ async def ping(ctx, help="Ping the bot"):
 
 @bot.command()
 async def champ(ctx, champion_name, help="Get the champion stats from recent patch"):
-    await ctx.send(get_champion_data(champion_name))
+    # create an object to store the champion data
+    championData = {}
+    championData = returnChampionData(champion_name)
+    await ctx.send(f'Champion: {championData["id"]}\nWinrate: {championData["winrate"]}\nPickrate: {championData["pickrate"]}\nBanrate: {championData["banrate"]}')
 
 @bot.command()
 async def game(ctx, summoner_name, help=""):
@@ -40,7 +44,6 @@ async def game(ctx, summoner_name, help=""):
     championNames = []
     for champion in championIDs:
         championNames.append(getChampionName(str(champion)))
-
     await ctx.send(' '.join(championNames))
 
 
