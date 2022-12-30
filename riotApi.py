@@ -29,7 +29,6 @@ def getMatch(summonerID):
         for value in player:
             if value == 'championId':
                 championIDs.append(player[value])
-    # return championIDs
     return championIDs
 
 def getChampionName(championID):
