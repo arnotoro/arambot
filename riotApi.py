@@ -48,25 +48,15 @@ def updateChampionData():
     # change names of the champions lower case
     for champion in data:
         data[champion]["id"] = data[champion]["id"].lower()
+        if " " in data[champion]["id"]:
+            data[champion]["id"] = data[champion]["id"].replace(" ", "")
+        # check for dots in name
+        if "." in data[champion]["id"]:
+            data[champion]["id"] = data[champion]["id"].replace(".", "")
+        # check for apostrophes in name
+        if "'" in data[champion]["id"]:
+            data[champion]["id"] = data[champion]["id"].replace("'", "")
 
-    # check champion name for special characters
-    for champion in data:
-        if data[champion]["id"] == "kai'sa":
-            data[champion]["id"] = "kaisa"
-        if data[champion]["id"] == "master yi":
-            data[champion]["id"] = "masteryi"
-        if data[champion]["id"] == "miss fortune":
-            data[champion]["id"] = "missfortune"
-        if data[champion]["id"] == "twisted fate":
-            data[champion]["id"] = "twistedfate"
-        if data[champion]["id"] == "xin zhao":
-            data[champion]["id"] = "xinzhao"
-        if data[champion]["id"] == "tahm kench":
-            data[champion]["id"] = "tahmkench"
-        if data[champion]["id"] == "dr. mundo":
-            data[champion]["id"] = "drmundo"
-        if data[champion]["id"] == "aurelion sol":
-            data[champion]["id"] = "aurelionsol"
     # iterate through the champions name, winrate and  and crete a json object for each champion
     for champion in data:
         # create a json object for each champion
@@ -86,6 +76,9 @@ if __name__ == '__main__':
         #print(getChampionName(str(championID)))
     #updateChampionData()
     # object to store the champion data
-    champ = 'kaisa'
+    champ = 'ahri'
+    # create a list to store the champion data
+    championData = []
+    # call the function to return the champion data
     championData = returnChampionData(champ)
     print(championData)

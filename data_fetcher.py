@@ -7,10 +7,10 @@ def returnChampionData(championName):
         data = json.loads(f.read())
         # go through the data and find the champion name and three stats and insert them into the championData object
         for champion in data:
-            if data[champion]["id"] == championName:
-                championData["id"] = data[champion]["id"]
-                championData["winrate"] = data[champion]["winrate"]
-                championData["pickrate"] = data[champion]["pickrate"]
-                championData["banrate"] = data[champion]["banrate"]
+            if champion["name"] == championName:
+                championData["name"] = champion["name"]
+                championData["winrate"] = champion["winrate"]
+                championData["pickrate"] = champion["pickrate"]
+                championData["banrate"] = champion["banrate"]
                 break
     return championData

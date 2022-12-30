@@ -33,9 +33,9 @@ async def ping(ctx, help="Ping the bot"):
 @bot.command()
 async def champ(ctx, champion_name, help="Get the champion stats from recent patch"):
     # create an object to store the champion data
-    championData = {}
+    championData = []
     championData = returnChampionData(champion_name)
-    await ctx.send(f'Champion: {championData["id"]}\nWinrate: {championData["winrate"]}\nPickrate: {championData["pickrate"]}\nBanrate: {championData["banrate"]}')
+    await ctx.send(f'Champion: {championData["name"]}\nWinrate: {championData["winrate"]}\nPickrate: {championData["pickrate"]}\nBanrate: {championData["banrate"]}')
 
 @bot.command()
 async def game(ctx, summoner_name, help=""):
@@ -45,6 +45,11 @@ async def game(ctx, summoner_name, help=""):
     for champion in championIDs:
         championNames.append(getChampionName(str(champion)))
     await ctx.send(' '.join(championNames))
+
+# @bot.command()
+# async def update(ctx, help="Update the champion data"):
+#     updateChampionData()
+#     await ctx.send('Champion data has been updated')
 
 
 bot.run(TOKEN)
