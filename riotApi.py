@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 from jsonParse import returnChampionData
 
-from lolalytics_webscraper import *
+from lolalyticsWebscraper import *
 
 
 load_dotenv()
@@ -54,7 +54,7 @@ def updateChampionData():
 
     # iterate through the champions name, winrate and  and crete a json object for each champion
     # for champion in data:
-    championData = initDriver(champion.lower() for champion in data)
+    championData = getChampionStats(champion.lower() for champion in data)
     with open('champions/championData.json', 'w') as outfile:
             json.dump(championData, outfile, indent=4)
 

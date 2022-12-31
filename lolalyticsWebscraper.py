@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import re
 
-def getChampionData(driver, championName):
+def searchChampion(driver, championName):
     driver.get(f'https://lolalytics.com/lol/{championName}/build')
     cls = re.compile('ChampionStats.+')
     # create an object to store champion stats
@@ -41,11 +41,11 @@ def getChampionData(driver, championName):
         print(stats[1].text, stats[8].text, stats[10].text)
         return championStats
 
-def initDriver(championList):
+def getChampionStats(championList):
     driver = webdriver.Firefox()
     championStatList = []
     for champion in championList:
-        championStatList.append(getChampionData(driver, champion))
+        championStatList.append(searchChampion(driver, champion))
     print(championStatList)
     driver.quit()
 

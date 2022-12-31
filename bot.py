@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from discord.ext import commands
 from discord.ext.commands import has_permissions, MissingPermissions
 from jsonParse import returnChampionData
-from lolalytics_webscraper import *
+from lolalyticsWebscraper import *
 from riotApi import *
 
 
