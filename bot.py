@@ -50,6 +50,7 @@ async def game(ctx, summoner_name, help=""):
 
 @bot.command()
 async def update(ctx, help="Update the champion data"):
+    await ctx.send('Updating champion data...')
     updateChampionData()
     await ctx.send('Champion data has been updated')
 
