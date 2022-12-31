@@ -6,27 +6,19 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import re
 
-def get_champion_data(champion_name):
-    # TODO HEADLESS MODE
-    #options = Options()
-    #options.headless = True
-    #options.javascript_enabled = True
-    #options.no_sandbox = False
-    driver = webdriver.Firefox()
-
-    driver.get(f'https://lolalytics.com/lol/{champion_name}/build')
+def getChampionData(driver, championName):
+    driver.get(f'https://lolalytics.com/lol/{championName}/build')
     cls = re.compile('ChampionStats.+')
     # create an object to store champion stats
-    champion_stats = {}
-
+    championStats = {}
     try:
         # champion stats div
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/div[4]/div[1]/div[2]/div[2]"))
         )
         
         # get current patch number
-        getPatch = WebDriverWait(driver, 10).until(
+        getPatch = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/div[2]/div/div/div[1]/div[4]/div/div/div"))
         )
 
@@ -38,18 +30,23 @@ def get_champion_data(champion_name):
         for result in results:
             stats = result.find_all('div')
             #store champion stats in object
-            champion_stats['name'] = champion_name
-            champion_stats['winrate'] = stats[1].text
-            champion_stats['pickrate'] = stats[8].text
-            champion_stats['banrate'] = stats[10].text
+            championStats['name'] = championName
+            championStats['winrate'] = stats[1].text
+            championStats['pickrate'] = stats[8].text
+            championStats['banrate'] = stats[10].text
 
+    except:
+        print('Error')
     finally:
-        driver.quit()
+        print(stats[1].text, stats[8].text, stats[10].text)
+        return championStats
 
-        #res = f'Patch: {patch.text} \\ Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
-        return champion_stats
-        #return f'Patch: {patch} \\ Champion: {champion_name.capitalize()}, Winrate: {winrate}, Pickrate: {pickrate}, Banrate: {banrate}'
+def initDriver(championList):
+    driver = webdriver.Firefox()
+    championStatList = []
+    for champion in championList:
+        championStatList.append(getChampionData(driver, champion))
+    print(championStatList)
+    driver.quit()
 
-
-if __name__ == '__main__':
-    get_champion_data('kayn')
+    return championStatList

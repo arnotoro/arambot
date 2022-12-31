@@ -35,23 +35,23 @@ async def champ(ctx, champion_name, help="Get the champion stats from recent pat
     # create an object to store the champion data
     championData = []
     championData = returnChampionData(champion_name)
+    print(championData)
     await ctx.send(f'Champion: {championData["name"].capitalize()}\nWinrate: {championData["winrate"]}\nPickrate: {championData["pickrate"]}\nBanrate: {championData["banrate"]}')
 
 @bot.command()
 async def game(ctx, summoner_name, help=""):
     summonerID = getSummonerID(summoner_name)
     championIDs = getMatch(summonerID)
-    championNames = []
     message = str("**Team 1**\n```arm\n" + "\n".join(
         (getChampionName(str(championName))) for ind, championName in enumerate(championIDs) if ind < 5) + "```\n" + "**Team 2**\n```yaml\n" + "\n".join(
         (getChampionName(str(championName))) for ind, championName in enumerate(championIDs) if ind >= 5)+ "```")
 
     await ctx.send(message)
 
-# @bot.command()
-# async def update(ctx, help="Update the champion data"):
-#     updateChampionData()
-#     await ctx.send('Champion data has been updated')
+@bot.command()
+async def update(ctx, help="Update the champion data"):
+    updateChampionData()
+    await ctx.send('Champion data has been updated')
 
 
 bot.run(TOKEN)
