@@ -1,7 +1,9 @@
 import os
 import discord
+import discord.ext
 from dotenv import load_dotenv
 from discord.ext import commands
+from discord.ext.commands import has_permissions, MissingPermissions
 from jsonParse import returnChampionData
 from lolalytics_webscraper import *
 from riotApi import *
@@ -49,10 +51,15 @@ async def game(ctx, summoner_name, help=""):
     await ctx.send(message)
 
 @bot.command()
+@has_permissions(kick_members=True)
 async def update(ctx, help="Update the champion data"):
     await ctx.send('Updating champion data...')
     updateChampionData()
     await ctx.send('Champion data has been updated')
 
+@update.error
+async def update_error(ctx, error):
+    if isinstance(error, MissingPermissions):
+        await ctx.send("You don't have the permission to do that")
 
 bot.run(TOKEN)
