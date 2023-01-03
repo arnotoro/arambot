@@ -39,7 +39,7 @@ async def champ(ctx, champion_name, help="Get the champion stats from recent pat
 
 # function to get the games champion names and add reactions to the message based on the summoner name
 @bot.command()
-async def game(ctx, summoner_name, help=""):
+async def game(ctx, summoner_name, help="Get the champion names from the game"):
     summonerID = getSummonerID(summoner_name)
     championIDs = getMatch(summonerID)
     championNames = []
