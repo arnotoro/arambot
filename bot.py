@@ -45,9 +45,9 @@ async def game(ctx, summoner_name, help="Get the champion names from the game"):
     championNames = []
     for champion in championIDs:
         championNames.append(getChampionName(str(champion)))
-    reactions = ['🔵', '🔴']
     message = await ctx.send(' '.join(championNames))
-    # have not been able to test this yet
-    await message.add_reaction(reactions)
+    # tested
+    await message.add_reaction('🔵')
+    await message.add_reaction('🔴')
 
 bot.run(TOKEN)
