@@ -32,6 +32,7 @@ async def on_ready():
 async def ping(ctx, help="Ping the bot"):
     await ctx.send('pong')
 
+# function to get the champion stats from local json file
 @bot.command()
 async def champ(ctx, champion_name, help="Get the champion stats from recent patch"):
     # create an object to store the champion data
@@ -40,8 +41,9 @@ async def champ(ctx, champion_name, help="Get the champion stats from recent pat
     print(championData)
     await ctx.send(f'Champion: {championData["name"].capitalize()}\nWinrate: {championData["winrate"]}\nPickrate: {championData["pickrate"]}\nBanrate: {championData["banrate"]}')
 
+# function to get the games champion names and add reactions to the message based on the summoner name
 @bot.command()
-async def game(ctx, summoner_name, help=""):
+async def game(ctx, summoner_name, help="Get the champion names from the game"):
     summonerID = getSummonerID(summoner_name)
     championIDs = getMatch(summonerID)
     message = str("**Team 1**\n```arm\n" + "\n".join(
@@ -49,6 +51,8 @@ async def game(ctx, summoner_name, help=""):
         (getChampionName(str(championName))) for ind, championName in enumerate(championIDs) if ind >= 5)+ "```")
 
     await ctx.send(message)
+    await message.add_reaction('🔵')
+    await message.add_reaction('🔴')
 
 @bot.command()
 @has_permissions(kick_members=True)
