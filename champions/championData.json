@@ -1,0 +1,974 @@
+[
+    {
+        "name": "aatrox",
+        "winrate": "50.55%",
+        "pickrate": "12.52%",
+        "banrate": "25.39%"
+    },
+    {
+        "name": "ahri",
+        "winrate": "50.59%",
+        "pickrate": "4.36%",
+        "banrate": "1.40%"
+    },
+    {
+        "name": "akali",
+        "winrate": "48.50%",
+        "pickrate": "8.93%",
+        "banrate": "15.07%"
+    },
+    {
+        "name": "akshan",
+        "winrate": "52.64%",
+        "pickrate": "2.88%",
+        "banrate": "3.78%"
+    },
+    {
+        "name": "alistar",
+        "winrate": "50.29%",
+        "pickrate": "2.91%",
+        "banrate": "0.62%"
+    },
+    {
+        "name": "amumu",
+        "winrate": "53.01%",
+        "pickrate": "4.61%",
+        "banrate": "5.19%"
+    },
+    {
+        "name": "anivia",
+        "winrate": "52.94%",
+        "pickrate": "2.56%",
+        "banrate": "2.38%"
+    },
+    {
+        "name": "annie",
+        "winrate": "50.47%",
+        "pickrate": "1.01%",
+        "banrate": "0.30%"
+    },
+    {
+        "name": "aphelios",
+        "winrate": "46.02%",
+        "pickrate": "4.05%",
+        "banrate": "0.46%"
+    },
+    {
+        "name": "ashe",
+        "winrate": "50.67%",
+        "pickrate": "6.69%",
+        "banrate": "2.01%"
+    },
+    {
+        "name": "aurelionsol",
+        "winrate": "51.41%",
+        "pickrate": "0.46%",
+        "banrate": "0.17%"
+    },
+    {
+        "name": "azir",
+        "winrate": "47.44%",
+        "pickrate": "2.33%",
+        "banrate": "0.55%"
+    },
+    {
+        "name": "bard",
+        "winrate": "51.30%",
+        "pickrate": "3.80%",
+        "banrate": "0.37%"
+    },
+    {
+        "name": "belveth",
+        "winrate": "51.30%",
+        "pickrate": "3.52%",
+        "banrate": "10.99%"
+    },
+    {
+        "name": "blitzcrank",
+        "winrate": "51.45%",
+        "pickrate": "7.73%",
+        "banrate": "20.98%"
+    },
+    {
+        "name": "brand",
+        "winrate": "50.73%",
+        "pickrate": "4.12%",
+        "banrate": "2.29%"
+    },
+    {
+        "name": "braum",
+        "winrate": "48.80%",
+        "pickrate": "1.47%",
+        "banrate": "0.24%"
+    },
+    {
+        "name": "caitlyn",
+        "winrate": "50.67%",
+        "pickrate": "20.64%",
+        "banrate": "18.60%"
+    },
+    {
+        "name": "camille",
+        "winrate": "51.45%",
+        "pickrate": "6.64%",
+        "banrate": "2.81%"
+    },
+    {
+        "name": "cassiopeia",
+        "winrate": "51.26%",
+        "pickrate": "1.90%",
+        "banrate": "1.45%"
+    },
+    {
+        "name": "chogath",
+        "winrate": "49.75%",
+        "pickrate": "1.95%",
+        "banrate": "0.72%"
+    },
+    {
+        "name": "corki",
+        "winrate": "48.37%",
+        "pickrate": "1.12%",
+        "banrate": "0.16%"
+    },
+    {
+        "name": "darius",
+        "winrate": "51.15%",
+        "pickrate": "8.49%",
+        "banrate": "21.97%"
+    },
+    {
+        "name": "diana",
+        "winrate": "50.54%",
+        "pickrate": "6.80%",
+        "banrate": "4.42%"
+    },
+    {
+        "name": "draven",
+        "winrate": "51.41%",
+        "pickrate": "6.62%",
+        "banrate": "17.69%"
+    },
+    {
+        "name": "drmundo",
+        "winrate": "53.77%",
+        "pickrate": "8.58%",
+        "banrate": "13.83%"
+    },
+    {
+        "name": "ekko",
+        "winrate": "51.90%",
+        "pickrate": "9.35%",
+        "banrate": "8.20%"
+    },
+    {
+        "name": "elise",
+        "winrate": "53.24%",
+        "pickrate": "5.37%",
+        "banrate": "8.30%"
+    },
+    {
+        "name": "evelynn",
+        "winrate": "52.59%",
+        "pickrate": "4.78%",
+        "banrate": "9.94%"
+    },
+    {
+        "name": "ezreal",
+        "winrate": "48.50%",
+        "pickrate": "22.00%",
+        "banrate": "4.29%"
+    },
+    {
+        "name": "fiddlesticks",
+        "winrate": "53.79%",
+        "pickrate": "3.11%",
+        "banrate": "2.23%"
+    },
+    {
+        "name": "fiora",
+        "winrate": "52.03%",
+        "pickrate": "10.39%",
+        "banrate": "34.38%"
+    },
+    {
+        "name": "fizz",
+        "winrate": "51.17%",
+        "pickrate": "3.23%",
+        "banrate": "2.88%"
+    },
+    {
+        "name": "galio",
+        "winrate": "52.07%",
+        "pickrate": "1.70%",
+        "banrate": "0.26%"
+    },
+    {
+        "name": "gangplank",
+        "winrate": "50.30%",
+        "pickrate": "9.51%",
+        "banrate": "7.58%"
+    },
+    {
+        "name": "garen",
+        "winrate": "51.44%",
+        "pickrate": "4.15%",
+        "banrate": "1.56%"
+    },
+    {
+        "name": "gnar",
+        "winrate": "48.59%",
+        "pickrate": "2.14%",
+        "banrate": "0.39%"
+    },
+    {
+        "name": "gragas",
+        "winrate": "48.32%",
+        "pickrate": "1.97%",
+        "banrate": "0.39%"
+    },
+    {
+        "name": "graves",
+        "winrate": "49.05%",
+        "pickrate": "7.73%",
+        "banrate": "7.66%"
+    },
+    {
+        "name": "gwen",
+        "winrate": "49.90%",
+        "pickrate": "2.57%",
+        "banrate": "0.83%"
+    },
+    {
+        "name": "hecarim",
+        "winrate": "48.12%",
+        "pickrate": "8.05%",
+        "banrate": "32.09%"
+    },
+    {
+        "name": "heimerdinger",
+        "winrate": "52.61%",
+        "pickrate": "4.29%",
+        "banrate": "9.85%"
+    },
+    {
+        "name": "illaoi",
+        "winrate": "51.88%",
+        "pickrate": "3.64%",
+        "banrate": "3.44%"
+    },
+    {
+        "name": "irelia",
+        "winrate": "50.73%",
+        "pickrate": "7.31%",
+        "banrate": "18.37%"
+    },
+    {
+        "name": "ivern",
+        "winrate": "52.64%",
+        "pickrate": "0.76%",
+        "banrate": "0.22%"
+    },
+    {
+        "name": "janna",
+        "winrate": "53.08%",
+        "pickrate": "5.91%",
+        "banrate": "2.03%"
+    },
+    {
+        "name": "jarvaniv",
+        "winrate": "49.19%",
+        "pickrate": "1.76%",
+        "banrate": "0.14%"
+    },
+    {
+        "name": "jax",
+        "winrate": "49.75%",
+        "pickrate": "6.41%",
+        "banrate": "7.51%"
+    },
+    {
+        "name": "jayce",
+        "winrate": "49.38%",
+        "pickrate": "2.68%",
+        "banrate": "0.33%"
+    },
+    {
+        "name": "jhin",
+        "winrate": "51.99%",
+        "pickrate": "17.45%",
+        "banrate": "2.19%"
+    },
+    {
+        "name": "jinx",
+        "winrate": "50.80%",
+        "pickrate": "7.47%",
+        "banrate": "0.29%"
+    },
+    {
+        "name": "kaisa",
+        "winrate": "51.08%",
+        "pickrate": "24.45%",
+        "banrate": "5.56%"
+    },
+    {
+        "name": "kalista",
+        "winrate": "48.66%",
+        "pickrate": "2.34%",
+        "banrate": "0.65%"
+    },
+    {
+        "name": "karma",
+        "winrate": "49.84%",
+        "pickrate": "9.32%",
+        "banrate": "3.57%"
+    },
+    {
+        "name": "karthus",
+        "winrate": "49.01%",
+        "pickrate": "1.46%",
+        "banrate": "1.17%"
+    },
+    {
+        "name": "kassadin",
+        "winrate": "52.74%",
+        "pickrate": "8.98%",
+        "banrate": "13.47%"
+    },
+    {
+        "name": "katarina",
+        "winrate": "50.24%",
+        "pickrate": "9.32%",
+        "banrate": "8.26%"
+    },
+    {
+        "name": "kayle",
+        "winrate": "50.49%",
+        "pickrate": "2.27%",
+        "banrate": "0.51%"
+    },
+    {
+        "name": "kayn",
+        "winrate": "48.69%",
+        "pickrate": "7.07%",
+        "banrate": "6.72%"
+    },
+    {
+        "name": "kennen",
+        "winrate": "49.02%",
+        "pickrate": "1.12%",
+        "banrate": "0.36%"
+    },
+    {
+        "name": "khazix",
+        "winrate": "50.98%",
+        "pickrate": "6.12%",
+        "banrate": "2.23%"
+    },
+    {
+        "name": "kindred",
+        "winrate": "51.27%",
+        "pickrate": "7.14%",
+        "banrate": "8.34%"
+    },
+    {
+        "name": "kled",
+        "winrate": "52.19%",
+        "pickrate": "1.94%",
+        "banrate": "0.75%"
+    },
+    {
+        "name": "kogmaw",
+        "winrate": "52.15%",
+        "pickrate": "2.20%",
+        "banrate": "0.36%"
+    },
+    {
+        "name": "ksante",
+        "winrate": "50.42%",
+        "pickrate": "8.87%",
+        "banrate": "17.88%"
+    },
+    {
+        "name": "leblanc",
+        "winrate": "48.06%",
+        "pickrate": "3.67%",
+        "banrate": "6.43%"
+    },
+    {
+        "name": "leesin",
+        "winrate": "46.79%",
+        "pickrate": "9.99%",
+        "banrate": "4.29%"
+    },
+    {
+        "name": "leona",
+        "winrate": "50.15%",
+        "pickrate": "4.29%",
+        "banrate": "4.86%"
+    },
+    {
+        "name": "lillia",
+        "winrate": "51.25%",
+        "pickrate": "5.72%",
+        "banrate": "5.82%"
+    },
+    {
+        "name": "lissandra",
+        "winrate": "49.17%",
+        "pickrate": "2.10%",
+        "banrate": "0.73%"
+    },
+    {
+        "name": "lucian",
+        "winrate": "50.02%",
+        "pickrate": "11.68%",
+        "banrate": "4.66%"
+    },
+    {
+        "name": "lulu",
+        "winrate": "50.88%",
+        "pickrate": "10.33%",
+        "banrate": "12.19%"
+    },
+    {
+        "name": "lux",
+        "winrate": "50.97%",
+        "pickrate": "11.06%",
+        "banrate": "4.38%"
+    },
+    {
+        "name": "malphite",
+        "winrate": "51.60%",
+        "pickrate": "2.66%",
+        "banrate": "2.18%"
+    },
+    {
+        "name": "malzahar",
+        "winrate": "50.78%",
+        "pickrate": "4.06%",
+        "banrate": "3.44%"
+    },
+    {
+        "name": "maokai",
+        "winrate": "52.98%",
+        "pickrate": "2.65%",
+        "banrate": "1.02%"
+    },
+    {
+        "name": "masteryi",
+        "winrate": "52.36%",
+        "pickrate": "6.98%",
+        "banrate": "18.66%"
+    },
+    {
+        "name": "missfortune",
+        "winrate": "50.26%",
+        "pickrate": "5.12%",
+        "banrate": "1.20%"
+    },
+    {
+        "name": "mordekaiser",
+        "winrate": "51.68%",
+        "pickrate": "6.47%",
+        "banrate": "17.84%"
+    },
+    {
+        "name": "morgana",
+        "winrate": "50.46%",
+        "pickrate": "5.85%",
+        "banrate": "23.07%"
+    },
+    {
+        "name": "nami",
+        "winrate": "52.62%",
+        "pickrate": "12.54%",
+        "banrate": "3.90%"
+    },
+    {
+        "name": "nasus",
+        "winrate": "51.84%",
+        "pickrate": "4.26%",
+        "banrate": "3.73%"
+    },
+    {
+        "name": "nautilus",
+        "winrate": "49.99%",
+        "pickrate": "6.61%",
+        "banrate": "9.24%"
+    },
+    {
+        "name": "neeko",
+        "winrate": "52.22%",
+        "pickrate": "0.75%",
+        "banrate": "0.18%"
+    },
+    {
+        "name": "nidalee",
+        "winrate": "49.21%",
+        "pickrate": "3.06%",
+        "banrate": "1.17%"
+    },
+    {
+        "name": "nilah",
+        "winrate": "53.02%",
+        "pickrate": "3.78%",
+        "banrate": "9.18%"
+    },
+    {
+        "name": "nocturne",
+        "winrate": "52.08%",
+        "pickrate": "3.00%",
+        "banrate": "1.37%"
+    },
+    {
+        "name": "nunu",
+        "winrate": "52.45%",
+        "pickrate": "2.82%",
+        "banrate": "0.64%"
+    },
+    {
+        "name": "olaf",
+        "winrate": "52.52%",
+        "pickrate": "2.41%",
+        "banrate": "1.67%"
+    },
+    {
+        "name": "orianna",
+        "winrate": "49.02%",
+        "pickrate": "1.68%",
+        "banrate": "0.11%"
+    },
+    {
+        "name": "ornn",
+        "winrate": "50.57%",
+        "pickrate": "3.01%",
+        "banrate": "0.56%"
+    },
+    {
+        "name": "pantheon",
+        "winrate": "48.04%",
+        "pickrate": "1.83%",
+        "banrate": "0.77%"
+    },
+    {
+        "name": "poppy",
+        "winrate": "49.90%",
+        "pickrate": "0.98%",
+        "banrate": "0.95%"
+    },
+    {
+        "name": "pyke",
+        "winrate": "49.94%",
+        "pickrate": "8.46%",
+        "banrate": "11.94%"
+    },
+    {
+        "name": "qiyana",
+        "winrate": "49.13%",
+        "pickrate": "2.83%",
+        "banrate": "0.90%"
+    },
+    {
+        "name": "quinn",
+        "winrate": "52.50%",
+        "pickrate": "1.16%",
+        "banrate": "0.56%"
+    },
+    {
+        "name": "rakan",
+        "winrate": "51.96%",
+        "pickrate": "2.83%",
+        "banrate": "0.18%"
+    },
+    {
+        "name": "rammus",
+        "winrate": "53.98%",
+        "pickrate": "5.46%",
+        "banrate": "18.55%"
+    },
+    {
+        "name": "reksai",
+        "winrate": "51.34%",
+        "pickrate": "1.48%",
+        "banrate": "1.34%"
+    },
+    {
+        "name": "rell",
+        "winrate": "52.73%",
+        "pickrate": "1.71%",
+        "banrate": "0.37%"
+    },
+    {
+        "name": "renata",
+        "winrate": "51.94%",
+        "pickrate": "4.06%",
+        "banrate": "2.52%"
+    },
+    {
+        "name": "renekton",
+        "winrate": "49.10%",
+        "pickrate": "4.08%",
+        "banrate": "2.87%"
+    },
+    {
+        "name": "rengar",
+        "winrate": "49.10%",
+        "pickrate": "4.02%",
+        "banrate": "4.95%"
+    },
+    {
+        "name": "riven",
+        "winrate": "50.22%",
+        "pickrate": "5.11%",
+        "banrate": "1.30%"
+    },
+    {
+        "name": "rumble",
+        "winrate": "51.29%",
+        "pickrate": "1.46%",
+        "banrate": "0.64%"
+    },
+    {
+        "name": "ryze",
+        "winrate": "47.03%",
+        "pickrate": "2.62%",
+        "banrate": "0.25%"
+    },
+    {
+        "name": "samira",
+        "winrate": "52.12%",
+        "pickrate": "10.52%",
+        "banrate": "21.89%"
+    },
+    {
+        "name": "sejuani",
+        "winrate": "50.30%",
+        "pickrate": "3.36%",
+        "banrate": "1.08%"
+    },
+    {
+        "name": "senna",
+        "winrate": "49.75%",
+        "pickrate": "5.73%",
+        "banrate": "1.88%"
+    },
+    {
+        "name": "seraphine",
+        "winrate": "50.10%",
+        "pickrate": "2.63%",
+        "banrate": "0.64%"
+    },
+    {
+        "name": "sett",
+        "winrate": "49.98%",
+        "pickrate": "6.20%",
+        "banrate": "3.05%"
+    },
+    {
+        "name": "shaco",
+        "winrate": "49.62%",
+        "pickrate": "5.41%",
+        "banrate": "11.91%"
+    },
+    {
+        "name": "shen",
+        "winrate": "52.44%",
+        "pickrate": "3.72%",
+        "banrate": "0.74%"
+    },
+    {
+        "name": "shyvana",
+        "winrate": "51.13%",
+        "pickrate": "1.90%",
+        "banrate": "0.49%"
+    },
+    {
+        "name": "singed",
+        "winrate": "52.60%",
+        "pickrate": "2.17%",
+        "banrate": "0.52%"
+    },
+    {
+        "name": "sion",
+        "winrate": "47.89%",
+        "pickrate": "4.18%",
+        "banrate": "0.97%"
+    },
+    {
+        "name": "sivir",
+        "winrate": "50.14%",
+        "pickrate": "3.42%",
+        "banrate": "0.80%"
+    },
+    {
+        "name": "skarner",
+        "winrate": "52.19%",
+        "pickrate": "0.62%",
+        "banrate": "0.10%"
+    },
+    {
+        "name": "sona",
+        "winrate": "53.69%",
+        "pickrate": "3.89%",
+        "banrate": "0.20%"
+    },
+    {
+        "name": "soraka",
+        "winrate": "52.10%",
+        "pickrate": "6.16%",
+        "banrate": "2.66%"
+    },
+    {
+        "name": "swain",
+        "winrate": "50.52%",
+        "pickrate": "4.39%",
+        "banrate": "2.66%"
+    },
+    {
+        "name": "sylas",
+        "winrate": "49.09%",
+        "pickrate": "12.24%",
+        "banrate": "26.28%"
+    },
+    {
+        "name": "syndra",
+        "winrate": "49.15%",
+        "pickrate": "6.54%",
+        "banrate": "6.51%"
+    },
+    {
+        "name": "tahmkench",
+        "winrate": "49.87%",
+        "pickrate": "1.73%",
+        "banrate": "0.74%"
+    },
+    {
+        "name": "taliyah",
+        "winrate": "49.97%",
+        "pickrate": "0.88%",
+        "banrate": "0.34%"
+    },
+    {
+        "name": "talon",
+        "winrate": "51.22%",
+        "pickrate": "4.40%",
+        "banrate": "1.52%"
+    },
+    {
+        "name": "taric",
+        "winrate": "52.78%",
+        "pickrate": "1.46%",
+        "banrate": "0.23%"
+    },
+    {
+        "name": "teemo",
+        "winrate": "50.24%",
+        "pickrate": "3.02%",
+        "banrate": "3.62%"
+    },
+    {
+        "name": "thresh",
+        "winrate": "49.78%",
+        "pickrate": "9.70%",
+        "banrate": "2.14%"
+    },
+    {
+        "name": "tristana",
+        "winrate": "52.12%",
+        "pickrate": "6.48%",
+        "banrate": "1.76%"
+    },
+    {
+        "name": "trundle",
+        "winrate": "49.35%",
+        "pickrate": "1.43%",
+        "banrate": "1.28%"
+    },
+    {
+        "name": "tryndamere",
+        "winrate": "50.94%",
+        "pickrate": "2.66%",
+        "banrate": "2.40%"
+    },
+    {
+        "name": "twistedfate",
+        "winrate": "48.83%",
+        "pickrate": "2.02%",
+        "banrate": "0.11%"
+    },
+    {
+        "name": "twitch",
+        "winrate": "51.98%",
+        "pickrate": "5.98%",
+        "banrate": "9.20%"
+    },
+    {
+        "name": "udyr",
+        "winrate": "52.57%",
+        "pickrate": "6.92%",
+        "banrate": "30.90%"
+    },
+    {
+        "name": "urgot",
+        "winrate": "51.12%",
+        "pickrate": "2.10%",
+        "banrate": "0.55%"
+    },
+    {
+        "name": "varus",
+        "winrate": "50.73%",
+        "pickrate": "9.05%",
+        "banrate": "3.82%"
+    },
+    {
+        "name": "vayne",
+        "winrate": "49.94%",
+        "pickrate": "7.38%",
+        "banrate": "7.21%"
+    },
+    {
+        "name": "veigar",
+        "winrate": "50.04%",
+        "pickrate": "2.46%",
+        "banrate": "0.91%"
+    },
+    {
+        "name": "velkoz",
+        "winrate": "51.96%",
+        "pickrate": "2.39%",
+        "banrate": "0.37%"
+    },
+    {
+        "name": "vex",
+        "winrate": "52.47%",
+        "pickrate": "5.42%",
+        "banrate": "10.10%"
+    },
+    {
+        "name": "vi",
+        "winrate": "53.28%",
+        "pickrate": "4.39%",
+        "banrate": "0.81%"
+    },
+    {
+        "name": "viego",
+        "winrate": "48.81%",
+        "pickrate": "6.83%",
+        "banrate": "2.69%"
+    },
+    {
+        "name": "viktor",
+        "winrate": "50.99%",
+        "pickrate": "7.76%",
+        "banrate": "4.58%"
+    },
+    {
+        "name": "vladimir",
+        "winrate": "50.71%",
+        "pickrate": "4.07%",
+        "banrate": "5.32%"
+    },
+    {
+        "name": "volibear",
+        "winrate": "48.64%",
+        "pickrate": "1.61%",
+        "banrate": "0.73%"
+    },
+    {
+        "name": "warwick",
+        "winrate": "52.92%",
+        "pickrate": "4.27%",
+        "banrate": "3.23%"
+    },
+    {
+        "name": "xayah",
+        "winrate": "49.68%",
+        "pickrate": "3.85%",
+        "banrate": "0.31%"
+    },
+    {
+        "name": "xerath",
+        "winrate": "51.09%",
+        "pickrate": "4.83%",
+        "banrate": "3.89%"
+    },
+    {
+        "name": "xinzhao",
+        "winrate": "50.47%",
+        "pickrate": "1.62%",
+        "banrate": "0.24%"
+    },
+    {
+        "name": "yasuo",
+        "winrate": "49.27%",
+        "pickrate": "10.29%",
+        "banrate": "14.81%"
+    },
+    {
+        "name": "yone",
+        "winrate": "49.36%",
+        "pickrate": "8.71%",
+        "banrate": "9.54%"
+    },
+    {
+        "name": "yorick",
+        "winrate": "49.99%",
+        "pickrate": "2.13%",
+        "banrate": "1.73%"
+    },
+    {
+        "name": "yuumi",
+        "winrate": "47.52%",
+        "pickrate": "9.73%",
+        "banrate": "32.40%"
+    },
+    {
+        "name": "zac",
+        "winrate": "52.73%",
+        "pickrate": "4.64%",
+        "banrate": "4.13%"
+    },
+    {
+        "name": "zed",
+        "winrate": "50.56%",
+        "pickrate": "13.46%",
+        "banrate": "53.76%"
+    },
+    {
+        "name": "zeri",
+        "winrate": "50.45%",
+        "pickrate": "9.33%",
+        "banrate": "3.90%"
+    },
+    {
+        "name": "ziggs",
+        "winrate": "50.74%",
+        "pickrate": "1.06%",
+        "banrate": "0.15%"
+    },
+    {
+        "name": "zilean",
+        "winrate": "52.60%",
+        "pickrate": "4.42%",
+        "banrate": "2.12%"
+    },
+    {
+        "name": "zoe",
+        "winrate": "49.42%",
+        "pickrate": "2.54%",
+        "banrate": "0.84%"
+    },
+    {
+        "name": "zyra",
+        "winrate": "51.47%",
+        "pickrate": "3.34%",
+        "banrate": "1.59%"
+    },
+    {
+        "name": "wukong",
+        "winrate": "52.22%",
+        "pickrate": "3.90%",
+        "banrate": "2.22%"
+    }
+]

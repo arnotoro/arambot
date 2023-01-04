@@ -1,9 +1,11 @@
 import os
 import discord
+import discord.ext
 from dotenv import load_dotenv
 from discord.ext import commands
-from data_fetcher import returnChampionData
-from lolalytics_webscraper import *
+from discord.ext.commands import has_permissions, MissingPermissions
+from jsonParse import returnChampionData
+from lolalyticsWebscraper import *
 from riotApi import *
 
 
@@ -33,21 +35,35 @@ async def ping(ctx, help="Ping the bot"):
 # function to get the champion stats from local json file
 @bot.command()
 async def champ(ctx, champion_name, help="Get the champion stats from recent patch"):
-    championData = {}
+    # create an object to store the champion data
+    championData = []
     championData = returnChampionData(champion_name)
-    await ctx.send(f'Champion: {championData["id"]}\nWinrate: {championData["winrate"]}\nPickrate: {championData["pickrate"]}\nBanrate: {championData["banrate"]}')
+    print(championData)
+    await ctx.send(f'Champion: {championData["name"].capitalize()}\nWinrate: {championData["winrate"]}\nPickrate: {championData["pickrate"]}\nBanrate: {championData["banrate"]}')
 
 # function to get the games champion names and add reactions to the message based on the summoner name
 @bot.command()
 async def game(ctx, summoner_name, help="Get the champion names from the game"):
     summonerID = getSummonerID(summoner_name)
     championIDs = getMatch(summonerID)
-    championNames = []
-    for champion in championIDs:
-        championNames.append(getChampionName(str(champion)))
-    message = await ctx.send(' '.join(championNames))
-    # tested
+    message = str("**Team 1**\n```arm\n" + "\n".join(
+        (getChampionName(str(championName))) for ind, championName in enumerate(championIDs) if ind < 5) + "```\n" + "**Team 2**\n```yaml\n" + "\n".join(
+        (getChampionName(str(championName))) for ind, championName in enumerate(championIDs) if ind >= 5)+ "```")
+
+    await ctx.send(message)
     await message.add_reaction('🔵')
     await message.add_reaction('🔴')
+
+@bot.command()
+@has_permissions(kick_members=True)
+async def update(ctx, help="Update the champion data"):
+    await ctx.send('Updating champion data...')
+    updateChampionData()
+    await ctx.send('Champion data has been updated')
+
+@update.error
+async def update_error(ctx, error):
+    if isinstance(error, MissingPermissions):
+        await ctx.send("You don't have the permission to do that")
 
 bot.run(TOKEN)
