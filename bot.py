@@ -54,6 +54,7 @@ async def game(ctx, summoner_name, help="Get the champion names from the game"):
     await message.add_reaction('🔵')
     await message.add_reaction('🔴')
 
+# dev testing command
 @bot.command()
 @has_permissions(kick_members=True)
 async def update(ctx, help="Update the champion data"):
